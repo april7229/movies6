@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
                 <li><Link to="/"><span className="fa fa-star"></span> Popular</Link></li>
                 <li><Link to="/watchlist"><span className="fa fa-eye"></span> Watchlist</Link></li>
                 <li><Link to="/search"><span className="fa fa-search"></span> Search</Link></li>
-                <li><Link to="/MovieRow"><span className= "fa fa-search"></span>Over Veiw</Link></li>
+                <li><Link to="/getRated"><span className= "fa fa-heart"></span>Get Rated</Link></li>
             </ul>
         </div>
     );

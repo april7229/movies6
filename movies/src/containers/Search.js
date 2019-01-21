@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { getSearch } from '../services/movies.service'
-import MovieBlock from '../containers/MovieBlock'
+import MovieBlock from './MovieBlock'
 
 class Search extends Component {
   constructor () {
     super()
     this.state = {
       movies: []
+      
     }
   }
 

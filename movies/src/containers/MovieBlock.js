@@ -6,6 +6,8 @@ import { addToWatchlist, removeFromWatchlist } from '../actions';
 const MovieBlock = ({ movie, addToWatchlist, removeFromWatchlist }) => {
     let { title, poster_path, inWatchlist } = movie;
     poster_path = `http://image.tmdb.org/t/p/w300/${poster_path}`;
+ 
+
 
     return (
       <div className="movie-block">
