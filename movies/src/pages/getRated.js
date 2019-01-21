@@ -50,7 +50,7 @@ class getRated extends Component {
   }
   render () {
     return (
-      <div>
+      <div className='getRated'>
         <table className='getRated'>
           <tbody>
             <tr>

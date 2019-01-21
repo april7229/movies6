@@ -56,7 +56,7 @@ class Playing extends Component
     render()
     {
         return (
-            <div>
+            <div className="nowplaying">
                 <table className="titleBar">
                     <tbody>
                         <tr>
@@ -64,7 +64,7 @@ class Playing extends Component
                                 <img alt="app icon" width="50" src="movies_icon.jpg" />
                             </td>
                             <td>
-                                <h1> MoviesDB Search </h1>
+                                <h1> Now Playing </h1>
                             </td>
                         </tr>
                     </tbody>
