@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import { getRate } from '../services/movies.service'
-import MovieBlock from '../containers/MovieBlock'
+import React, { Component } from 'react';
 import $ from 'jquery'
 import MovieRow from '../containers/MovieRow'
+import Search from '../containers/Search';
 
 
 
@@ -59,7 +58,7 @@ class getRated extends Component {
                 <img alt='app icon' width='50' src='movies_icon.jpg' />
               </td>
               <td>
-                <h1> MoviesDB Search </h1>
+                <h1> Top Rated </h1>
               </td>
             </tr>
           </tbody>
