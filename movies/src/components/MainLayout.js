@@ -7,6 +7,7 @@ import WatchlistState from '../reducers';
 import Popular from '../pages/Popular';
 import Watchlist from '../pages/Watchlist';
 import Search from '../pages/Search';
+import MovieRow from '../pages/MovieRow';
 
 const store = createStore(WatchlistState);
 
@@ -16,10 +17,11 @@ const Main = () => {
         <Switch>
             <Route exact path="/" component={Popular} />
             <Route path="/watchlist" component={Watchlist} />
-            <Route path="/search" component={Search} />
+        <Route path="/search" component={Search} />
+        <Route path="/OverView" component={MovieRow}/>
         </Switch>
     </Provider>
   )
 }
 
-export default Main
+export default Main;
