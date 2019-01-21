@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import MovieRow from '../containers/MovieRow.js';
 import $ from 'jquery';
 import MovieBlock from '../containers/MovieBlock'
+import Search  from '../containers/Search'
 
 
 class Playing extends Component
@@ -10,14 +11,14 @@ class Playing extends Component
     constructor( props )
     {
         super( props );
-        this.state = {};
-        this.performSearch( " " )
+        this.state = { movies: []};
+        this.Search( " " )
     }
-    performSearch( searchTerm )
+    Search( searchTerm )
     {
         console.log( "Perform search using moviedb" );
 
-        const urlString = "https://api.themoviedb.org/3/movie/now_playing?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=&language=en-US&page=1" + searchTerm;
+        const urlString = "https://api.themoviedb.org/3/movie/now_playing?api_key=1b5adf76a72a13bad99b8fc0c68cb085&query=&language=en-US&page=1" + searchTerm ;
 
         $.ajax( {
 
@@ -51,7 +52,7 @@ class Playing extends Component
         console.log( event.target.value );
         const boundObject = this;
         const searchTerm = event.target.value;
-        this.performSearch( searchTerm );
+        this.Search( searchTerm );
     }
     render()
     {
@@ -81,7 +82,15 @@ class Playing extends Component
                 }} onChange={this.searchChangeHandler.bind( this )} placeholder="Enter search term" />
 
                 {this.state.rows}
+
+                <input type='text' onKeyUp={e => this.search( e.target.value )} />
+                <div>
+                    {this.state.movies.map( movie => (
+                        <MovieBlock movie={movie} key={movie.id} />
+                    ) )}
+                </div>
             </div>
+            
 
         );
     }

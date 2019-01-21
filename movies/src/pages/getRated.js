@@ -68,11 +68,11 @@ class getRated extends Component {
           style={{
             fontSize:24,
             display: 'block',
-            width: '80%',
+            width: '100%',
             paddingTop: 8,
             paddingBottom: 8,
             paddingLeft: 16,
-            margin: 80,
+            
           }}
           onChange={this.searchChangeHandler.bind(this)}
           placeholder='Enter search term'
